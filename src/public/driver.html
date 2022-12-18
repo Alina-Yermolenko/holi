@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="profile-block">
+    <div id="getUserInfo" class="menu">
+      <button id="getAccount" type="button">Profile</button>
+    </div>
+    <div class="profile info" style="display: none;">
+      <div class="user">
+        <div class="userButtons">
+          <button id="getProfile" type="button">My data</button>
+          <button id="deleteAccount" type="button">Delete account</button>
+          <div id="userInfo">
+          </div>
+        </div>
+        <div id="changePass">
+          <input id="oldPassword" name="oldPassword" type="text" placeholder="Old password">
+          <input id="newPassword" name="newPassword " type="text" placeholder="New password">
+          <button id="changePassword" type="button">Change password</button>
+          <div id="changedInfo"></div>
+        </div>
+      </div>
+    </div>
+    <div id="account">
+    </div>
+  </div>
+
+  <div class="trucks-block">
+    <div class="menu">
+      <button id="trucks-info" type="button">Trucks info</button>
+    </div>
+    <div class="aboutTrucks info" style="display: none;">
+      <div id="allTrucks">
+      </div>
+      <button id="showAllTrucks" type="button">Show all trucks</button>
+
+      <button id="addTruck" type="button">Add truck</button>
+      <select name="newTruck" id="newTruck">
+        <option value="">Please choose an option</option>
+        <option value="SPRINTER">SPRINTER</option>
+        <option value="SMALL STRAIGHT">SMALL STRAIGHT</option>
+        <option value="LARGE STRAIGHT">LARGE STRAIGHT</option>
+      </select>
+      <input id="findTruck" name="findTruck" type="text" placeholder="Find truck by id">
+      <button id="getTruck" type="button">Show truck by id</button>
+      <button id="assignTruck" type="button">Assign truck</button>
+      <button id="changeTruckButton" type="button">Change truck</button>
+      <button id="deleteTruck" type="button">Delete truck</button>
+      <button id="activeLoad" type="button">Get Assigned load</button>
+      <button id="loadState" type="button">Change Assigned load state</button>
+
+
+      <input id="findLoad" name="findLoad" type="text" placeholder="Find load by id">
+      <button id="getLoadById" type="button">Find load</button>
+      <div id="truck"></div>
+      <!-- <div class="change">
+      <input id="changeTruck" name="changeTruck" type="text" placeholder="Change truck details">
+      </div> -->
+      <button id="getAllLoadsButton" type="button">My loads</button>
+      <table id="allLoads">
+    </div>
+    <!--
+    <button id="getLoadById" type="button">Find load</button>
+    </table> -->
+    <!-- <div>
+        <input id="noteNumber" name="noteNumber" type="text" placeholder="Note number">
+        <p>Please provide a note number to use these buttons</p>
+        <p>*To change a note fill the "Create or change note"</p>
+
+        <button id="getNote" type="button">Get note</button>
+        <button id="changeNote" type="button">Change note</button>
+        <button id="noteCheck" type="button">Check note</button>
+        <button id="deleteNote" type="button">Delete note</button>
+      </div> -->
+  </div>
+  <script src="./js/truck.js"></script>
+  <script src="./js/account.js"></script>
+
+</body>
+
+</html>

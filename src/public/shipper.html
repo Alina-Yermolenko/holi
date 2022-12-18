@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipper</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="profile-block">
+    <div id="getUserInfo" class="menu">
+      <button id="getAccount" type="button">Profile</button>
+    </div>
+    <div class="profile info" style="display: none;" >
+      <div class="user">
+        <div class="userButtons">
+          <button id="getProfile" type="button">My data</button>
+          <button id="deleteAccount" type="button">Delete account</button>
+          <div id="userInfo">
+          </div>
+        </div>
+        <div id="changePass">
+          <input id="oldPassword" name="oldPassword" type="text" placeholder="Old password">
+          <input id="newPassword" name="newPassword " type="text" placeholder="New password">
+          <button id="changePassword" type="button">Change password</button>
+          <div id="changedInfo"></div>
+        </div>
+      </div>
+    </div>
+    <div id="account">
+    </div>
+  </div>
+
+  <div class="loads-block">
+    <div id="showLoads" class="menu">
+      <button id="loadsInfo" type="button">Loads</button>
+      <div class="submenu">
+        <button type="button" id="loadFormButton">Create or edit load</button>
+        <button id="getAllLoadsButton" type="button">My loads</button>
+        <button id="getNewLoadsButton" type="button">New loads</button>
+
+      </div>
+    </div>
+    <!-- style="display: none;" -->
+    <div class="loads info">
+      <input id="findLoad" name="findLoad" type="text" placeholder="Find load by id">
+      <button id="getLoadById" type="button">Find load</button>
+      <button id="deleteLoad" type="button">Delete load</button>
+      <button id="shippingInfo" type="button">Get shipping load</button>
+
+      <div id="getAllLoads">
+        <table id="allLoads">
+        </table>
+      </div>
+
+      <div class="loadsForm">
+        <form id="formData" style="display: none;">
+          <input type="text" id="name" name="name" placeholder="Name"><br>
+          <input type="number" id="payload" name="payload" placeholder="Payload"><br>
+          <input type="text" id="pickup_address" name="pickup_address" placeholder="Pickup address" required><br>
+          <input type="text" id="delivery_address" name="delivery_address" placeholder="Delivery address" required><br>
+          <input type="number" id="width" name="width" placeholder="Width" required><br>
+          <input type="number" id="length" name="length" placeholder="Length" required><br>
+          <input type="number" id="height" name="height" placeholder="height" required><br>
+          <button id="addLoad" type="button">Add load</button>
+          <button id="editLoad" type="button">Edit load</button>
+        </form>
+        <div id="load"></div>
+      </div>
+
+      <div id="postLoad">
+        <button id="postLoadButton" type="button">Post load</button>
+        <table id="newLoadsTable">
+
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="./js/load.js"></script>
+  <script src="./js/account.js"></script>
+</body>
+
+</html>
