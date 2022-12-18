@@ -35,7 +35,7 @@ trucksInfo.addEventListener('click', () => {
 showAllTrucks.addEventListener('click', () => {
   getTrucks()
   async function getTrucks() {
-    const response = await fetch('http://localhost:8080/api/trucks', {
+    const response = await fetch('/api/trucks', {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -71,7 +71,7 @@ addTruck.addEventListener('click', () => {
   const newTruck = document.getElementById('newTruck').value;
   addOneTruck()
   async function addOneTruck() {
-    const response = await fetch('http://localhost:8080/api/trucks', {
+    const response = await fetch('/api/trucks', {
       method: 'POST',
       credentials: 'same-origin',
       headers: {
@@ -102,7 +102,7 @@ loadState.addEventListener('click', () => {
   changeActiveLoad()
 
   async function changeActiveLoad() {
-    const response = await fetch(`http://localhost:8080/api/loads/active/state`, {
+    const response = await fetch(`/api/loads/active/state`, {
       method: 'PATCH',
       credentials: 'same-origin',
       headers: {
@@ -126,7 +126,7 @@ activeLoad.addEventListener('click', () => {
   getActiveLoad()
 
   async function getActiveLoad() {
-    const response = await fetch(`http://localhost:8080/api/loads/active`, {
+    const response = await fetch(`/api/loads/active`, {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -182,7 +182,7 @@ getTruck.addEventListener('click', () => {
   getOnetruck()
 
   async function getOnetruck() {
-    const response = await fetch(`http://localhost:8080/api/trucks/${truckNumber}`, {
+    const response = await fetch(`/api/trucks/${truckNumber}`, {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -221,7 +221,7 @@ changeTruckButton.addEventListener('click', () => {
 
   changeOnetruck()
   async function changeOnetruck() {
-    const response = await fetch(`http://localhost:8080/api/trucks/${truckNumber}`, {
+    const response = await fetch(`/api/trucks/${truckNumber}`, {
       method: 'PUT',
       credentials: 'same-origin',
       headers: {
@@ -258,7 +258,7 @@ deleteTruck.addEventListener('click', () => {
   const truckNumber = document.getElementById('findTruck').value;
   deleteOnetruck()
   async function deleteOnetruck() {
-    const response = await fetch(`http://localhost:8080/api/trucks/${truckNumber}`, {
+    const response = await fetch(`/api/trucks/${truckNumber}`, {
       method: 'DELETE',
       credentials: 'same-origin',
       headers: {
@@ -281,7 +281,7 @@ assignTruck.addEventListener('click', () => {
   assignOnetruck()
 
   async function assignOnetruck() {
-    const response = await fetch(`http://localhost:8080/api/trucks/${truckNumber}/assign`, {
+    const response = await fetch(`/api/trucks/${truckNumber}/assign`, {
       method: 'POST',
       credentials: 'same-origin',
       headers: {
@@ -315,7 +315,7 @@ assignTruck.addEventListener('click', () => {
 getAllLoadsButton.addEventListener('click', () => {
   getLoads()
   async function getLoads() {
-    const response = await fetch('http://localhost:8080/api/loads', {
+    const response = await fetch('/api/loads', {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -368,7 +368,7 @@ getLoadById.addEventListener('click', () => {
   getOneLoad()
 
   async function getOneLoad() {
-    const response = await fetch(`http://localhost:8080/api/loads/${findLoad}`, {
+    const response = await fetch(`/api/loads/${findLoad}`, {
       method: 'GET',
       credentials: 'same-origin',
       headers: {

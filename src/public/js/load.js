@@ -40,7 +40,7 @@ loadFormButton.addEventListener('click', () => {
 getAllLoadsButton.addEventListener('click', () => {
   getLoads()
   async function getLoads() {
-    const response = await fetch('http://localhost:8080/api/loads', {
+    const response = await fetch('/api/loads', {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -93,7 +93,7 @@ getAllLoadsButton.addEventListener('click', () => {
 getNewLoadsButton.addEventListener('click', () => {
   getLoads()
   async function getLoads() {
-    const response = await fetch('http://localhost:8080/api/loads', {
+    const response = await fetch('/api/loads', {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -154,7 +154,7 @@ addLoad.addEventListener('click', () => {
 
   addOneLoad()
   async function addOneLoad() {
-    const response = await fetch('http://localhost:8080/api/loads', {
+    const response = await fetch('/api/loads', {
       method: 'POST',
       credentials: 'same-origin',
       headers: {
@@ -192,7 +192,7 @@ postLoadButton.addEventListener('click', () => {
   const findLoad = document.getElementById('findLoad').value;
   postOneLoad();
   async function postOneLoad() {
-    const response = await fetch(`http://localhost:8080/api//loads/${findLoad}/post`, {
+    const response = await fetch(`/api//loads/${findLoad}/post`, {
       method: 'POST',
       credentials: 'same-origin',
       headers: {
@@ -214,7 +214,7 @@ getLoadById.addEventListener('click', () => {
   getOneLoad()
 
   async function getOneLoad() {
-    const response = await fetch(`http://localhost:8080/api/loads/${findLoad}`, {
+    const response = await fetch(`/api/loads/${findLoad}`, {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -283,7 +283,7 @@ editLoad.addEventListener('click', () => {
 
   editOneLoad()
   async function editOneLoad() {
-    const response = await fetch(`http://localhost:8080/api/loads/${findLoad}`, {
+    const response = await fetch(`/api/loads/${findLoad}`, {
       method: 'PUT',
       credentials: 'same-origin',
       headers: {
@@ -317,7 +317,7 @@ deleteLoad.addEventListener('click', () => {
   const findLoad = document.getElementById('findLoad').value;
   deleteOneLoad()
   async function deleteOneLoad() {
-    const response = await fetch(`http://localhost:8080/api/loads/${findLoad}`, {
+    const response = await fetch(`/api/loads/${findLoad}`, {
       method: 'DELETE',
       credentials: 'same-origin',
       headers: {
@@ -342,7 +342,7 @@ shippingInfo.addEventListener('click', () => {
   getShippingInfo()
 
   async function getShippingInfo() {
-    const response = await fetch(`http://localhost:8080/api/loads/${findLoad}/shipping_info`, {
+    const response = await fetch(`/api/loads/${findLoad}/shipping_info`, {
       method: 'GET',
       credentials: 'same-origin',
       headers: {

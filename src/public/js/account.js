@@ -17,7 +17,7 @@ getAccount.addEventListener('click', () => {
 getProfile.addEventListener('click', () => {
   getInfo()
   async function getInfo() {
-    const response = await fetch('http://localhost:8080/api/users/me', {
+    const response = await fetch('/api/users/me', {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -40,7 +40,7 @@ deleteAccount.addEventListener('click', () => {
   deleteAcc()
 
   async function deleteAcc() {
-    const response = await fetch('http://localhost:8080/api/users/me', {
+    const response = await fetch('/api/users/me', {
       method: 'DELETE',
       credentials: 'same-origin',
       headers: {
@@ -60,7 +60,7 @@ changePassword.addEventListener('click', () => {
   const newPassword = document.getElementById('newPassword').value;
 
   async function changePass(oldPassword, newPassword) {
-    const response = await fetch('http://localhost:8080/api/users/me', {
+    const response = await fetch('/api/users/me', {
       method: 'PATCH',
       credentials: 'same-origin',
       headers: {

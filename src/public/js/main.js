@@ -30,7 +30,7 @@ login.addEventListener('click', () => {
 })
 
 async function registerAccount(email, password, role) {
-  const response = await fetch('http://localhost:8080/api/auth/register', {
+  const response = await fetch('/api/auth/register', {
     method: 'POST',
     credentials: 'same-origin',
     headers: {
@@ -55,7 +55,7 @@ async function registerAccount(email, password, role) {
 }
 
 async function enterAccount(email, password) {
-  let response = await fetch('http://localhost:8080/api/auth/login', {
+  let response = await fetch('/api/auth/login', {
     method: 'POST',
     credentials: 'same-origin',
     headers: {
@@ -74,7 +74,7 @@ async function enterAccount(email, password) {
     response = await response.json()
     token = response.jwt_token;
     localStorage.setItem('token', token);
-    const responseProfile = await fetch('http://localhost:8080/api/users/me', {
+    const responseProfile = await fetch('/api/users/me', {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -108,7 +108,7 @@ forgotPassword.addEventListener('click', () => {
 
   sendPassword(email)
   async function sendPassword(email) {
-    const response = await fetch('http://localhost:8080/api/auth/forgot_password', {
+    const response = await fetch('/api/auth/forgot_password', {
       method: 'POST',
       credentials: 'same-origin',
       headers: {
